@@ -29,7 +29,7 @@ const change_log: ChangeLog = {added: [], changed: [], fixed: []};
 // Get current changelog from the json file
 async function readCurrentChangelog() {
   var file = await fs.readFile(__dirname + '/static/changelog.json', 'utf8');
-  if (file !== "" && file !== null) {
+  if (file.length !== 0) {
     return JSON.parse(file) 
   }
   return change_log

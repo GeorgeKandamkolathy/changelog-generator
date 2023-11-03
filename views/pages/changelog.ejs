@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<main>
+  <div class="jumbotron">
+    <h1>Current changelog</h1>
+
+    <h2>Added</h2>
+    <ul>
+        <% changelog.added.forEach(function(element) { %>
+            <li>
+                <%= element %>     
+            </li>
+        <% }); %>
+    </ul>
+
+    <h2>Changed</h2>
+    <ul>
+        <% changelog.changed.forEach(function(element) { %>
+            <li>
+                <%= element %>     
+            </li>
+        <% }); %>
+    </ul>
+
+    <h2>Fixed</h2>
+    <ul>
+        <% changelog.fixed.forEach(function(element) { %>
+            <li>
+                <%= element %>     
+            </li>
+        <% }); %>
+    </ul>
+  </div>
+</main>
+
+</body>
+</html>
